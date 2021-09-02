@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# gifos-Mario-Conti
+EN PROCESO. Este repositorio contiene el con proyecto del tercer sprint de Acamica/Digital House de Frontend: Una página de Gifos. Este proyecto será desarrollado mediante el uso de: React, JS, CSS y HTML. Así también se trabajará asincrónia y consultas a APIs externas
+>>>>>>> 3c31053cde53963208792fc9565b5f583690f9f2
