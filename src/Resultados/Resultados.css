@@ -1,0 +1,24 @@
+* {
+  color: #572ee5;
+}
+
+.contenedor-resultados {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 10rem;
+}
+
+.contenedor-resultados p {
+  font-size: 20px;
+}
+
+.contenedor-galeria {
+  width: 80%;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #e7e7e7;
+}
