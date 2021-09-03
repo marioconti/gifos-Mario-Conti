@@ -1,16 +1,14 @@
 import React from "react";
 import "./Header.css";
+import { ReactComponent as LogoHeader } from "../imagenes/logo-desktop.svg";
 
 export const Header = () => {
   return (
     <>
       <div className="contenedor-header">
-        <a
-          className="logo"
-          src="./Recursos/ilustra_header.svg"
-          alt="logo svg"
-        />
-        <a />
+        <a href="contenedor-header">
+          <LogoHeader />
+        </a>
         <button type="button" className="boton-darkmode">
           {" "}
           Modo Dark
