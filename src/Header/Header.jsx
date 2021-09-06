@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import { ReactComponent as LogoHeader } from "../imagenes/logo-desktop.svg";
+import { ReactComponent as LogoHeader } from "../Imagenes/logo-desktop.svg";
 
 export const Header = () => {
   return (
