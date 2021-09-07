@@ -13,3 +13,7 @@
   background-color: #373737;
 }
 /* ============================================== */
+/* CLASE PARA DAR TRANSICION AL BG DE ELEMENTOS */
+.transition {
+  transition: background-color 0.5s ease;
+}

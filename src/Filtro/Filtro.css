@@ -13,6 +13,7 @@
   font-size: 30px;
   line-height: 42px;
   color: #572ee5;
+
 }
 
 span {
@@ -20,6 +21,7 @@ span {
 }
 /* ============================================== */
 /* BARRA DE BUSQUEDA */
+
 .buscador {
   display: flex;
 }

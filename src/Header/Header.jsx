@@ -7,7 +7,11 @@ import { ReactComponent as LogoHeaderDark } from "../images/logo-mobile-modo-noc
 export const Header = (props) => {
   return (
     <>
-      <div className={`contenedor-header ${props.darkMode ? "dark" : "light"}`}>
+      <div
+        className={`contenedor-header ${
+          props.darkMode ? "dark" : "light"
+        }transition`}
+      >
         <a className="logo" href="contenedor-header">
           {props.darkMode ? <LogoHeaderDark /> : <LogoHeaderLight />}
         </a>

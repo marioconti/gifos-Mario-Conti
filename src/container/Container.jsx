@@ -10,7 +10,7 @@ export const Container = () => {
   /* ============================================== */
   return (
     <>
-      <div className={`contenedor-principal ${darkMode ? "dark" : "light"}`}>
+      <div className={`contenedor-principal ${darkMode ? "dark" : "light"} transition`}>
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />
         <Filtro darkMode={darkMode} />
         <Resultados darkMode={darkMode} />

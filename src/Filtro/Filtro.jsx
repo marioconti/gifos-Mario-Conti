@@ -6,14 +6,18 @@ import { ReactComponent as ImagenLupa } from "../images/lupa-light.svg";
 export const Filtro = (props) => {
   return (
     <>
-      <div className={`contenedor-filtro ${props.darkMode ? "dark" : "light"}`}>
+      <div
+        className={`contenedor-filtro ${
+          props.darkMode ? "dark" : "light"
+        }transition`}
+      >
         <p>
           ¡Inspirate y busca los mejores <span>GIFS!</span>{" "}
         </p>
         <ImagenHeader />
         <div className="buscador">
-          <input className="filtro" type="text" placeholder="Busca gifs" />
-          <button className="btn-buscar">
+          <input className="filtro transition" type="text" placeholder="Busca gifs" />
+          <button className="btn-buscar ">
             <ImagenLupa />
           </button>
         </div>

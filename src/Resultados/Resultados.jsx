@@ -6,10 +6,12 @@ export const Resultados = (props) => {
   return (
     <>
       <div
-        className={`contenedor-resultados ${props.darkMode ? "dark" : "light"}`}
+        className={`contenedor-resultados ${
+          props.darkMode ? "dark" : "light"
+        } transition`}
       >
         <p>Resultado de la búsqueda</p>
-        <div className="contenedor-galeria">
+        <div className="contenedor-galeria transition">
           <ListadoGifs />
         </div>
       </div>
