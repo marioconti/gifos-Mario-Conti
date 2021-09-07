@@ -1,7 +1,5 @@
-* {
-  color: #572ee5;
-}
-
+/* MODO LIGHT */
+/* CONTENEDOR PRINCIPAL */
 .contenedor-resultados {
   display: flex;
   flex-direction: column;
@@ -10,11 +8,13 @@
   width: 80%;
   margin-bottom: 10rem;
 }
-
+/* ============================================== */
+/* TITULO SECCION */
 .contenedor-resultados p {
   font-size: 20px;
 }
-
+/* ============================================== */
+/* GALERIA */
 .contenedor-galeria {
   width: 80%;
   height: auto;
@@ -31,3 +31,16 @@
   height: 200px;
   margin: 28px;
 }
+/* ============================================== */
+/* MODO DARK */
+/* TITULO SECCION DARK */
+.dark .contenedor-resultados p {
+  color: #fff;
+  font-weight: 400;
+}
+/* ============================================== */
+/* GALERIA DARK*/
+.dark .contenedor-galeria {
+  background-color: #212121;
+}
+/* ============================================== */

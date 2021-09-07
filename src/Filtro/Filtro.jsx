@@ -2,11 +2,11 @@ import React from "react";
 import "./Filtro.css";
 import { ReactComponent as ImagenHeader } from "../images/imagen-grupo.svg";
 import { ReactComponent as ImagenLupa } from "../images/lupa-light.svg";
-
-export const Filtro = () => {
+// COMPONENTE FILTRO
+export const Filtro = (props) => {
   return (
     <>
-      <div className="contenedor-filtro">
+      <div className={`contenedor-filtro ${props.darkMode ? "dark" : "light"}`}>
         <p>
           ¡Inspirate y busca los mejores <span>GIFS!</span>{" "}
         </p>
@@ -21,3 +21,4 @@ export const Filtro = () => {
     </>
   );
 };
+/* ============================================== */

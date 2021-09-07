@@ -1,19 +1,30 @@
 import React from "react";
 import "./Header.css";
-import { ReactComponent as LogoHeader } from "../images/logo-desktop.svg";
+import { ReactComponent as LogoHeaderLight } from "../images/logo-desktop.svg";
+import { ReactComponent as LogoHeaderDark } from "../images/logo-mobile-modo-noct.svg";
 
-export const Header = () => {
+// COMPONENTE HEADER
+export const Header = (props) => {
   return (
     <>
-      <div className="contenedor-header">
-        <a href="contenedor-header">
-          <LogoHeader />
+      <div className={`contenedor-header ${props.darkMode ? "dark" : "light"}`}>
+        <a className="logo" href="contenedor-header">
+          {props.darkMode ? <LogoHeaderDark /> : <LogoHeaderLight />}
         </a>
-        <button type="button" className="boton-darkmode">
+        {/* BOTON DARK MODE */}
+        <button
+          type="button"
+          className="boton-darkmode"
+          onClick={() => {
+            props.setDarkMode(!props.darkMode);
+          }}
+        >
           {" "}
-          Modo Dark
+          MODO {props.darkMode ? "LIGHT" : "DARK"}
         </button>
       </div>
+      {/* /* ==============================================  */}
     </>
   );
 };
+/* ============================================== */

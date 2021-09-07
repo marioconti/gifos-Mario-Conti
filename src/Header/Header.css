@@ -1,3 +1,5 @@
+/* MODO LIGHT */
+/* CONTENEDOR PRINCIPAL */
 .contenedor-header {
   width: 60%;
   height: 150px;
@@ -6,6 +8,8 @@
   align-items: center;
 }
 
+/* ============================================== */
+/* BOTON DARKMODE LIGHT */
 .boton-darkmode {
   width: 120px;
   height: 35px;
@@ -13,14 +17,17 @@
   border-radius: 61px;
   background-color: white;
   color: #6809e1;
-  font-weight: 600;
-  margin-right: 70px;
-cursor: pointer;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-.logo {
-  width: 80px;
-  height: 80px;
-  margin-left: 70px;
-  background-color: yellowgreen;
+/* ============================================== */
+/* MODO DARK */
+/* BOTON DARKMODE DARK */
+.dark .boton-darkmode {
+  border: 1px solid #fff;
+  background-color: #373737;
+  font-weight: 400;
+  color: #fff;
 }
+/* ============================================== */
