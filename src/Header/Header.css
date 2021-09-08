@@ -6,7 +6,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
- 
 }
 
 /* ============================================== */
@@ -21,6 +20,9 @@
   font-weight: 500;
   cursor: pointer;
 }
+.boton-darkmode:active {
+  background-color: #f5f4f4;
+}
 
 /* ============================================== */
 /* MODO DARK */
@@ -30,5 +32,8 @@
   background-color: #373737;
   font-weight: 400;
   color: #fff;
+}
+.dark .boton-darkmode:active {
+  background-color: #474747;
 }
 /* ============================================== */

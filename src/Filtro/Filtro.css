@@ -13,7 +13,6 @@
   font-size: 30px;
   line-height: 42px;
   color: #572ee5;
-
 }
 
 span {
@@ -55,6 +54,12 @@ span {
   cursor: pointer;
   padding: 1.5rem;
 }
+.btn-buscar:active,
+.dark .btn-buscar:active {
+  background-color: #4325af;
+}
+
+
 
 .lupa {
   width: 20px;
