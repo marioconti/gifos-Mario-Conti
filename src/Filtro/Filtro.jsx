@@ -4,6 +4,16 @@ import { ReactComponent as ImagenHeader } from "../images/imagen-grupo.svg";
 import { ReactComponent as ImagenLupa } from "../images/lupa-light.svg";
 // COMPONENTE FILTRO
 export const Filtro = (props) => {
+  const handleClick = () => {
+    props.setBotonBuscador(!props.botonBuscador);
+    // FIXME:Fijarse si esto está bien, de que haga volver a false
+    props.setBotonBuscador(false);
+  };
+  console.log(props.botonBuscador);
+  const handleChange = (e) => {
+    props.setBuscador(e.target.value);
+  };
+  console.log(props.buscador);
   return (
     <>
       <div
@@ -16,8 +26,18 @@ export const Filtro = (props) => {
         </p>
         <ImagenHeader />
         <div className="buscador">
-          <input className="filtro transition" type="text" placeholder="Busca gifs" />
-          <button className="btn-buscar ">
+          <input
+            value={props.buscador}
+            onChange={handleChange}
+            className="filtro transition"
+            type="text"
+            placeholder="Busca gifs"
+          />
+          <button
+            value={props.botonBuscador}
+            onClick={handleClick}
+            className="btn-buscar "
+          >
             <ImagenLupa />
           </button>
         </div>

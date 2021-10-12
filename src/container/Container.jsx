@@ -7,13 +7,29 @@ import "./Container.css";
 export const Container = () => {
   // Estado para dark mode
   const [darkMode, setDarkMode] = useState(false);
+  const [buscador, setBuscador] = useState("");
+  const [botonBuscador, setBotonBuscador] = useState(false);
   /* ============================================== */
   return (
     <>
-      <div className={`contenedor-principal ${darkMode ? "dark" : "light"} transition`}>
+      <div
+        className={`contenedor-principal ${
+          darkMode ? "dark" : "light"
+        } transition`}
+      >
         <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-        <Filtro darkMode={darkMode} />
-        <Resultados darkMode={darkMode} />
+        <Filtro
+          darkMode={darkMode}
+          buscador={buscador}
+          setBuscador={setBuscador}
+          botonBuscador={botonBuscador}
+          setBotonBuscador={setBotonBuscador}
+        />
+        <Resultados
+          darkMode={darkMode}
+          buscador={buscador}
+          botonBuscador={botonBuscador}
+        />
       </div>
     </>
   );
