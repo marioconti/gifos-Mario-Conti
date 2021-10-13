@@ -6,9 +6,9 @@ import "./Container.css";
 
 export const Container = () => {
   // Estado para dark mode
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(null);
   const [buscador, setBuscador] = useState("");
-  const [botonBuscador, setBotonBuscador] = useState(false);
+  const [botonBuscador, setBotonBuscador] = useState(null);
   /* ============================================== */
   return (
     <>
@@ -28,7 +28,9 @@ export const Container = () => {
         <Resultados
           darkMode={darkMode}
           buscador={buscador}
+          setBuscador={setBuscador}
           botonBuscador={botonBuscador}
+          setBotonBuscador={setBotonBuscador}
         />
       </div>
     </>

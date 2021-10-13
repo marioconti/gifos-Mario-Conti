@@ -6,14 +6,10 @@ import { ReactComponent as ImagenLupa } from "../images/lupa-light.svg";
 export const Filtro = (props) => {
   const handleClick = () => {
     props.setBotonBuscador(!props.botonBuscador);
-    // FIXME:Fijarse si esto está bien, de que haga volver a false
-    props.setBotonBuscador(false);
   };
-  console.log(props.botonBuscador);
   const handleChange = (e) => {
     props.setBuscador(e.target.value);
   };
-  console.log(props.buscador);
   return (
     <>
       <div
