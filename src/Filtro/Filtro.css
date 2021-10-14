@@ -14,17 +14,14 @@
   line-height: 42px;
   color: #572ee5;
 }
-
 span {
   font-weight: bold;
 }
 /* ============================================== */
 /* BARRA DE BUSQUEDA */
-
 .buscador {
   display: flex;
 }
-
 .filtro {
   width: 21rem;
   height: 2.5rem;
@@ -34,11 +31,9 @@ span {
   font-size: 16px;
   padding: 1.5rem 25px;
 }
-
 .filtro:focus {
   outline: none;
 }
-
 .btn-buscar {
   display: flex;
   align-items: center;
@@ -58,13 +53,37 @@ span {
 .dark .btn-buscar:active {
   background-color: #4325af;
 }
-
-
-
 .lupa {
   width: 20px;
   height: 20px;
   color: white;
+}
+/* ============================================== */
+/* CUADRO SUGERENCIAS */
+.sugerencias {
+  width: 370px;
+  height: auto;
+  background-color: #7459d3;
+  border-radius: 0 0 25px 25px;
+  text-align: center;
+}
+.sugerencias p {
+  color: white;
+  font-size: 25px;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.sugerencias p:first-child {
+  margin-top: 0px;
+}
+
+.sugerencias p:last-child {
+  margin-bottom: 23px;
+}
+
+.sugerencias p:hover {
+  background-color: #5f3ed6;
 }
 /* ============================================== */
 /* MODO LIGHT */
@@ -80,7 +99,6 @@ span {
   color: white;
   font-weight: 300;
 }
-
 .dark .btn-buscar {
   border: 1px solid #fff;
   background-color: #572ee5;

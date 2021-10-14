@@ -7,7 +7,7 @@ import { API_KEY } from "../ApiGiphy";
 export const Resultados = (props) => {
   const [listaGifs, setListaGifs] = useState([]);
   const [loading, setLoading] = useState(null);
-  // const [mostrarError, setMostrarError] = useState("");
+  // const [mostrarError, setMostrarError] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -22,14 +22,14 @@ export const Resultados = (props) => {
       });
   }, [props.botonBuscador]);
 
-  console.log(listaGifs);
-  console.log(props.botonBuscador);
+  // console.log(listaGifs);
+  // console.log(props.botonBuscador);
 
   // FX RENDERIZADO DINÁMICO
   const ListadoGifs = () => {
     const gifs = listaGifs.map((gif) => {
       return (
-        <div className="gif">
+        <div key={`imagen:${gif.id}`} className="gif">
           <a className="link-gif" href={`${gif.url}`} target="_blank">
             <img src={`${gif.images.original.url}`} alt={`${gif.title}`} />
           </a>
