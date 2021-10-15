@@ -9,6 +9,7 @@ export const Container = () => {
   const [darkMode, setDarkMode] = useState(null);
   const [buscador, setBuscador] = useState("");
   const [botonBuscador, setBotonBuscador] = useState(null);
+
   /* ============================================== */
   return (
     <>

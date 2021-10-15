@@ -8,7 +8,6 @@ export const Resultados = (props) => {
   const [listaGifs, setListaGifs] = useState([]);
   const [loading, setLoading] = useState(null);
   // const [mostrarError, setMostrarError] = useState(false);
-
   useEffect(() => {
     setLoading(true);
     // FIXME: se activa el spinner en el primer render, ¿como prevenir eso? que solo se active cuando se ejecute el
@@ -19,6 +18,7 @@ export const Resultados = (props) => {
       .then((listaGifs) => {
         setListaGifs(listaGifs.data);
         setLoading(false);
+        props.setBuscador("");
       });
   }, [props.botonBuscador]);
 
@@ -36,12 +36,9 @@ export const Resultados = (props) => {
         </div>
       );
     });
+
     return gifs;
   };
-  /* ============================================== */
-
-  // hora 1:22 de la clase
-  /* ============================================== */
 
   return (
     <>
@@ -58,12 +55,7 @@ export const Resultados = (props) => {
               <div></div>
             </div>
           ) : null}
-          {listaGifs.length > 0 ? (
-            <ListadoGifs />
-          ) : (
-            // FIXME:arreglar esto para que no aparezca al comienzo
-            <h1>Prueba de nuevo</h1>
-          )}
+          {(listaGifs.length === 0 ? <h1>Prueba de nuevo</h1> : <ListadoGifs />)}
         </div>
       </div>
     </>

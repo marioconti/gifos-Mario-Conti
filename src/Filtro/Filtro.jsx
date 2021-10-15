@@ -7,26 +7,44 @@ import { ReactComponent as ImagenLupa } from "../images/lupa-light.svg";
 export const Filtro = (props) => {
   const [monstrarAC, setMostrarAC] = useState(false);
   const [sugerencias, setSugerencias] = useState([]);
+  const [sugerencia, setSugerencia] = useState("");
 
-  useEffect(() => {
-    fetch(
-      `https://api.giphy.com/v1/gifs/search/tags?api_key=${API_KEY}&q=${props.buscador}&limit=5&offset=0`
-    )
-      .then((res) => res.json())
-      .then((sug) => {
-        setSugerencias(sug.data);
-
-        if (props.buscador.length >= 2 && sugerencias !== 1) {
-          setMostrarAC(true);
-        } else {
-          setMostrarAC(false);
-        }
-      });
-  }, [props.buscador]);
+  useEffect(
+    () => {
+      fetch(
+        `https://api.giphy.com/v1/gifs/search/tags?api_key=${API_KEY}&q=${props.buscador}&limit=5&offset=0`
+      )
+        .then((res) => res.json())
+        .then((sug) => {
+          setSugerencias(sug.data);
+          // FX para mostrar AutoComplete si es > a 2 el buscador
+          if (props.buscador.length >= 2) {
+            setMostrarAC(true);
+          } else {
+            setMostrarAC(false);
+          }
+          /* ============================================== */
+          // FX para no mostrar AC si el texto seleccionado es = al buscador
+          if (props.buscador === sugerencia) {
+            setMostrarAC(false);
+            props.setBuscador(sugerencia);
+          }
+          console.log(
+            "2." + "esto es una lo del buscador" + " " + props.buscador
+          );
+          console.log("3." + "esto es una sugerencia" + " " + sugerencia);
+        });
+      /* ============================================== */
+    },
+    [props.buscador],
+    []
+  );
 
   const handleSugerencia = (e) => {
-    props.setBuscador(e.target.innerHTML);
+    setSugerencia(e.target.innerHTML);
     setMostrarAC(false);
+    props.setBuscador(e.target.innerHTML);
+    console.log("1." + "esto es el e target" + " " + e.target.innerHTML);
   };
 
   const handleClick = () => {
@@ -65,7 +83,6 @@ export const Filtro = (props) => {
         {monstrarAC && (
           <div className="sugerencias">
             {sugerencias.map((sugerencia) => {
-              console.log(sugerencia);
               return (
                 <p
                   onClick={handleSugerencia}
