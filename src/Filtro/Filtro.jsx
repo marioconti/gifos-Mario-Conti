@@ -29,10 +29,7 @@ export const Filtro = (props) => {
             setMostrarAC(false);
             props.setBuscador(sugerencia);
           }
-          console.log(
-            "2." + "esto es una lo del buscador" + " " + props.buscador
-          );
-          console.log("3." + "esto es una sugerencia" + " " + sugerencia);
+      
         });
       /* ============================================== */
     },
@@ -44,7 +41,6 @@ export const Filtro = (props) => {
     setSugerencia(e.target.innerHTML);
     setMostrarAC(false);
     props.setBuscador(e.target.innerHTML);
-    console.log("1." + "esto es el e target" + " " + e.target.innerHTML);
   };
 
   const handleClick = () => {
@@ -61,7 +57,7 @@ export const Filtro = (props) => {
         }transition`}
       >
         <p>
-          ¡Inspirate y busca los mejores <span>GIFS!</span>{" "}
+          ¡Inspirate y busca los mejores <span>GIFS! </span>{" "}
         </p>
         <ImagenHeader />
         <div className="buscador">
