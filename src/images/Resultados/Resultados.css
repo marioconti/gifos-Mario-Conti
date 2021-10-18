@@ -81,13 +81,9 @@
   color: #fff;
   font-weight: 400;
 }
-.dark .contenedor-resultados h1{
-  color: #fff;
-}
 /* ============================================== */
 /* GALERIA DARK*/
 .dark .contenedor-galeria {
   background-color: #212121;
-  color: white;
 }
 /* ============================================== */
