@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/gifos-Mario-Conti/static/css/main.02e0ef72.chunk.css",
-    "main.js": "/gifos-Mario-Conti/static/js/main.67163440.chunk.js",
-    "main.js.map": "/gifos-Mario-Conti/static/js/main.67163440.chunk.js.map",
+    "main.css": "/gifos-Mario-Conti/static/css/main.78dbf26d.chunk.css",
+    "main.js": "/gifos-Mario-Conti/static/js/main.eea41ed9.chunk.js",
+    "main.js.map": "/gifos-Mario-Conti/static/js/main.eea41ed9.chunk.js.map",
     "runtime-main.js": "/gifos-Mario-Conti/static/js/runtime-main.d5d5bcbf.js",
     "runtime-main.js.map": "/gifos-Mario-Conti/static/js/runtime-main.d5d5bcbf.js.map",
-    "static/js/2.df68069e.chunk.js": "/gifos-Mario-Conti/static/js/2.df68069e.chunk.js",
-    "static/js/2.df68069e.chunk.js.map": "/gifos-Mario-Conti/static/js/2.df68069e.chunk.js.map",
+    "static/js/2.d99ae360.chunk.js": "/gifos-Mario-Conti/static/js/2.d99ae360.chunk.js",
+    "static/js/2.d99ae360.chunk.js.map": "/gifos-Mario-Conti/static/js/2.d99ae360.chunk.js.map",
     "static/js/3.80d34ede.chunk.js": "/gifos-Mario-Conti/static/js/3.80d34ede.chunk.js",
     "static/js/3.80d34ede.chunk.js.map": "/gifos-Mario-Conti/static/js/3.80d34ede.chunk.js.map",
     "index.html": "/gifos-Mario-Conti/index.html",
-    "static/css/main.02e0ef72.chunk.css.map": "/gifos-Mario-Conti/static/css/main.02e0ef72.chunk.css.map",
-    "static/js/2.df68069e.chunk.js.LICENSE.txt": "/gifos-Mario-Conti/static/js/2.df68069e.chunk.js.LICENSE.txt",
+    "static/css/main.78dbf26d.chunk.css.map": "/gifos-Mario-Conti/static/css/main.78dbf26d.chunk.css.map",
+    "static/js/2.d99ae360.chunk.js.LICENSE.txt": "/gifos-Mario-Conti/static/js/2.d99ae360.chunk.js.LICENSE.txt",
     "static/media/imagen-grupo.89962837.svg": "/gifos-Mario-Conti/static/media/imagen-grupo.89962837.svg",
     "static/media/logo-desktop.f3ae6dc5.svg": "/gifos-Mario-Conti/static/media/logo-desktop.f3ae6dc5.svg",
     "static/media/logo-mobile-modo-noct.c863a3ea.svg": "/gifos-Mario-Conti/static/media/logo-mobile-modo-noct.c863a3ea.svg",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.d5d5bcbf.js",
-    "static/js/2.df68069e.chunk.js",
-    "static/css/main.02e0ef72.chunk.css",
-    "static/js/main.67163440.chunk.js"
+    "static/js/2.d99ae360.chunk.js",
+    "static/css/main.78dbf26d.chunk.css",
+    "static/js/main.eea41ed9.chunk.js"
   ]
 }
