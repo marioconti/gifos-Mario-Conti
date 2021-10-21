@@ -2,11 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./Resultados.css";
 import { API_KEY } from "../ApiGiphy";
 
-// import { listaGifs } from "../Recursos/arrayGifs";
 // COMPONENTE RESULTADOS
 export const Resultados = (props) => {
   const [listaGifs, setListaGifs] = useState([]);
-  const [trendings, setTredings] = useState([]);
   const [loading, setLoading] = useState(null);
 
   useEffect(() => {
@@ -15,58 +13,40 @@ export const Resultados = (props) => {
     )
       .then((res) => res.json())
       .then((sug) => {
-        setTredings(sug.data);
+        setListaGifs(sug.data);
       });
   }, []);
 
   useEffect(() => {
-    setLoading(true);
-    fetch(
-      `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${props.buscador}&limit=25&offset=0&rating=g&lang=en`
-    )
-      .then((res) => res.json())
-      .then((listaGifs) => {
-        setListaGifs(listaGifs.data);
-        setTredings([]);
-        setLoading(false);
-        props.setBuscador("");
-      });
+    if (props.mostrarError) {
+      setLoading(true);
+      fetch(
+        `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${props.buscador}&limit=20&offset=0&rating=g&lang=en`
+      )
+        .then((res) => res.json())
+        .then((listaGifs) => {
+          setListaGifs(listaGifs.data);
+          props.setBuscador("");
+          setLoading(false);
+        });
+    }
   }, [props.botonBuscador]);
 
   // FX RENDERIZADO DINÁMICO
   const ListadoGifs = () => {
     const gifs = listaGifs.map((gif) => {
       return (
-        <>
+        <div className="gif" key={`Imagen:${gif.id}`}>
           {listaGifs.length > 0 && (
-            <div key={`imagen:${gif.id}`} className="gif">
-              <a className="link-gif" href={`${gif.url}`} target="_blank">
-                <img src={`${gif.images.original.url}`} alt={`${gif.title}`} />
-              </a>
-            </div>
+            <a className="link-gif" href={`${gif.url}`} target="_blank">
+              <img src={`${gif.images.original.url}`} alt={`${gif.title}`} />
+            </a>
           )}
-        </>
-      );
-    });
-
-    return gifs;
-  };
-
-  const ListadoTrendings = () => {
-    const gifsT = trendings.map((trending) => {
-      return (
-        <div key={`imagen:${trending.id}`} className="gif">
-          <a className="link-gif" href={`${trending.url}`} target="_blank">
-            <img
-              src={`${trending.images.original.url}`}
-              alt={`${trending.title}`}
-            />
-          </a>
         </div>
       );
     });
 
-    return gifsT;
+    return gifs;
   };
 
   return (
@@ -76,15 +56,7 @@ export const Resultados = (props) => {
           props.darkMode ? "dark" : "light"
         } transition`}
       >
-        <p>Resultado de la búsqueda</p>
-        {trendings.length > 0 && (
-          <>
-            <h1>Trendings</h1>
-            <div className="contenedor-galeria transition">
-              <ListadoTrendings />
-            </div>
-          </>
-        )}
+        <p>Resultado de la búsqueda:</p>
 
         {listaGifs.length > 0 && (
           <div className="contenedor-galeria transition">
@@ -96,13 +68,18 @@ export const Resultados = (props) => {
             <ListadoGifs />
           </div>
         )}
-        {listaGifs.length === 0 && trendings.length === 0 && (
+        {listaGifs.length === 0 && props.mostrarError && (
           <div className="contenedor-galeria transition">
-            <h1>No se encontraron GIFs 😥</h1>
+            <h1>
+              {" "}
+              No se encontraron GIFs
+              <span role="img" aria-labelledby="carita-llorando">
+                😥
+              </span>
+            </h1>
           </div>
         )}
       </div>
     </>
   );
 };
-/* ============================================== */

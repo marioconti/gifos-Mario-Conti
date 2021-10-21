@@ -13,7 +13,7 @@
 /* ============================================== */
 /* TITULO SECCION */
 .contenedor-resultados p {
-  font-size: 20px;
+  font-size: 25px;
 }
 /* ============================================== */
 /* GALERIA */
@@ -33,6 +33,7 @@
   height: 200px;
   margin: 28px;
 }
+
 /* ============================================== */
 /* LINK AL GIF */
 .link-gif {
@@ -45,7 +46,7 @@
   width: 80px;
   height: 80px;
   position: absolute;
-  top:2.5rem
+  top: 3.5rem;
 }
 .lds-ring div {
   position: absolute;
@@ -81,7 +82,7 @@
   color: #fff;
   font-weight: 400;
 }
-.dark .contenedor-resultados h1{
+.dark .contenedor-resultados h1 {
   color: #fff;
 }
 /* ============================================== */

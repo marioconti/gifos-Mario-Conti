@@ -1,11 +1,12 @@
 /* MODO LIGHT */
 /* CONTENEDOR PRINCIPAL */
 .contenedor-header {
-  width: 60%;
-  height: 150px;
+  width: 85%;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 50px;
 }
 
 /* ============================================== */

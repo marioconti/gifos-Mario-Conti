@@ -5,12 +5,11 @@ import { Resultados } from "../Resultados/Resultados";
 import "./Container.css";
 
 export const Container = () => {
-  // Estado para dark mode
   const [darkMode, setDarkMode] = useState(null);
   const [buscador, setBuscador] = useState("");
-  const [botonBuscador, setBotonBuscador] = useState(null);
+  const [botonBuscador, setBotonBuscador] = useState(false);
+  const [mostrarError, setMostrarError] = useState(false);
 
-  /* ============================================== */
   return (
     <>
       <div
@@ -25,6 +24,7 @@ export const Container = () => {
           setBuscador={setBuscador}
           botonBuscador={botonBuscador}
           setBotonBuscador={setBotonBuscador}
+          setMostrarError={setMostrarError}
         />
         <Resultados
           darkMode={darkMode}
@@ -32,9 +32,9 @@ export const Container = () => {
           setBuscador={setBuscador}
           botonBuscador={botonBuscador}
           setBotonBuscador={setBotonBuscador}
+          mostrarError={mostrarError}
         />
       </div>
     </>
   );
 };
-//==================================================

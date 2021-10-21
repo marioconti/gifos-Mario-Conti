@@ -3,6 +3,7 @@ import { API_KEY } from "../ApiGiphy";
 import "./Filtro.css";
 import { ReactComponent as ImagenHeader } from "../images/imagen-grupo.svg";
 import { ReactComponent as ImagenLupa } from "../images/lupa-light.svg";
+import { ReactComponent as ImagenLupita } from "../images/lupa-light.svg";
 // COMPONENTE FILTRO
 export const Filtro = (props) => {
   const [monstrarAC, setMostrarAC] = useState(false);
@@ -35,15 +36,20 @@ export const Filtro = (props) => {
   const handleSugerencia = (e) => {
     setSugerencia(e.target.innerHTML);
     setMostrarAC(false);
+    props.setMostrarError(true);
+    props.setBotonBuscador(!props.botonBuscador);
     props.setBuscador(e.target.innerHTML);
   };
 
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
     props.setBotonBuscador(!props.botonBuscador);
+    props.setMostrarError(true);
   };
   const handleChange = (e) => {
     props.setBuscador(e.target.value);
   };
+
   return (
     <>
       <div
@@ -55,7 +61,8 @@ export const Filtro = (props) => {
           ¡Inspirate y busca los mejores <span>GIFS!</span>{" "}
         </p>
         <ImagenHeader />
-        <div className="buscador">
+
+        <form className="buscador" onSubmit={handleClick}>
           {props.buscador > 0 && (
             <div onClick={() => props.setBuscador("")} className="reset">
               X
@@ -80,20 +87,18 @@ export const Filtro = (props) => {
               {sugerencias.map((sugerencia) => {
                 return (
                   <div
+                    key={`sugerencias${sugerencia.name}`}
                     className="texto-sugerencia"
                     onClick={handleSugerencia}
-                    key={`sugerencias${sugerencia.name}`}
                   >
-                    {/* <div className="lupita">🔍</div> */}
-                    {sugerencia.name}
+                    <p>{sugerencia.name}</p>
                   </div>
                 );
               })}
             </div>
           )}
-        </div>
+        </form>
       </div>
     </>
   );
 };
-/* ============================================== */
